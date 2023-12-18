@@ -1,0 +1,29 @@
+.button{
+  display: flex;
+  background: transparent;
+  border: none;
+  align-items: center;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--dark-white-dark);
+  transition: all .3s linear;
+  &:hover{
+    color: var(--dark-white-main);
+    .button__icon{
+      background: var(--dark-black-main);
+      border: 1px solid var(--dark-black-lines);
+    }
+  }
+  &__icon{
+    margin-left: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-black-light);
+    border-radius: 10px;
+    transition: all .3s linear;
+    border: 1px solid transparent;
+  }
+}

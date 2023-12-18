@@ -1,0 +1,110 @@
+@import "styles/variables";
+
+.footer{
+  background: var(--dark-black-main);
+  &__head{
+    padding: 25px 0;
+    background: var(--dark-black-dark);
+    &_wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: $sm ){
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      ul {
+        @media (max-width: $sm ){
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 24px;
+        }
+        li:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &__main{
+    padding: 40px 0;
+    display: grid;
+    grid-template-areas:
+    "changer contacts payments"
+    "info copyright up";
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 24px;
+    @media (max-width: $md ) {
+      grid-template-areas:
+      "contacts payments"
+      "changer up"
+      "info copyright";
+      grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width: $sm ){
+      grid-template-areas:
+      "contacts"
+      "payments"
+      "changer"
+      "info"
+      "copyright"
+      "up";
+      grid-template-columns: 1fr;
+      padding-top: 25px;
+      padding-bottom: 60px;
+    }
+    &_changer{
+      display: flex;
+      align-items: center;
+      grid-area: changer;
+      @media (max-width: $sm ){
+        justify-content: center;
+      }
+      :global(.change-country__btn){
+        margin-right: 28px;
+        @media (max-width: $sm ){
+          margin-right: 12px;
+        }
+      }
+    }
+    &_contacts{
+      grid-area: contacts;
+    }
+    &_payments{
+      grid-area: payments;
+      @media (max-width: $sm ){
+
+      }
+    }
+    &_info{
+      grid-area: info;
+      align-self: flex-end;
+      @media (max-width: $sm) {
+       text-align: center;
+      }
+    }
+    &_copyright{
+      grid-area: copyright;
+      align-self: flex-end;
+      text-align: center;
+    }
+    &_up{
+      grid-area: up;
+      justify-content: flex-end;
+      display: flex;
+      align-items: flex-end;
+      @media (max-width: $sm) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      button{
+        @media (max-width: $sm) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

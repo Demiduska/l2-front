@@ -1,0 +1,82 @@
+@import "styles/variables";
+.label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: var(--dark-white-main);
+  position: relative;
+  @media (max-width: $sm) {
+    flex-wrap: wrap;
+  }
+  input{
+    width: 310px;
+    color: var(--dark-white-dark);
+    @media (max-width: $sm) {
+      width: 100%;
+      margin-top: 12px;
+    }
+    &:global(.input-file){
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  &__error{
+    margin-top: 6px;
+    display: block;
+    padding-left: calc( 100% - 310px);
+    @media (max-width: $sm){
+      padding-left: 0;
+    }
+  }
+  &__show{
+    cursor: pointer;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    &:global(.active){
+      svg path {
+        fill: var(--dark-white-light);
+      }
+    }
+  }
+  &__image{
+    &_wrap{
+      display: flex;
+      width: 310px;
+      @media (max-width: $sm){
+        width: 100%;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+.input{
+  &__fill{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-left: 12px;
+    &_content{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+    }
+  }
+  &__buttons{
+    display: flex;
+    align-items: flex-end;
+  }
+  &__button{
+    margin-right: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    cursor: pointer;
+  }
+}

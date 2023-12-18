@@ -1,0 +1,53 @@
+@import "styles/variables";
+
+.step{
+  &__title{
+    color: var(--dark-white-light);
+    margin-bottom: 40px;
+    &_step2{
+      margin-bottom: 24px;
+    }
+    @media (max-width: $sm) {
+      margin-bottom: 24px;
+    }
+  }
+  &__info{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2,1fr);
+    @media (max-width: $xl) {
+      grid-template-columns: 1fr;
+    }
+    &_head{
+      padding: 12px 18px;
+    }
+    &_spec{
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      row-gap: 12px;
+      @media (max-width: $sm) {
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 20px;
+        row-gap: 6px;
+      }
+    }
+    &_more{
+      margin-top: 24px;
+      @media (max-width: $sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__additional{
+    margin-top: 40px;
+    &_list{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 24px;
+      @media (max-width: $xl){
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

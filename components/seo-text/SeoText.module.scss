@@ -1,0 +1,23 @@
+@import "styles/variables";
+
+.seo{
+  background:  var(--dark-black-dark);
+  border-radius: 20px;
+  padding: 40px;
+  @media (max-width: $sm){
+    padding: 24px;
+  }
+  h2{
+    color: var(--dark-white-main);
+    margin-bottom: 24px;
+    @media (max-width: $sm){
+      margin-bottom: 12px;
+    }
+  }
+  p{
+    margin-bottom: 24px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

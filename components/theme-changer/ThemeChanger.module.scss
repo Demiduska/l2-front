@@ -1,0 +1,32 @@
+.switch {
+  width: 48px;
+  height: 24px;
+  display: flex;
+  justify-content: flex-start;
+  background: var(--dark-white-dark);
+  border-radius: 60px;
+  cursor: pointer;
+  padding: 3px;
+  position: relative;
+  &_sun{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &_moon{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.switch[data-ison="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  background: var(--dark-white-main);
+  width: 18px;
+  height: 18px;
+  border-radius: 60px;
+}

@@ -1,0 +1,25 @@
+@import "styles/variables";
+
+.section{
+  padding-top: 88px;
+  padding-bottom: 80px;
+  @media (max-width: $sm) {
+    padding-top: 78px;
+    padding-bottom: 52px;
+  }
+  &__steps{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 24px;
+    grid-template-rows: auto 1fr;
+    @media (max-width: $xl) {
+      grid-template-columns: auto 250px;
+    }
+    @media (max-width: $md) {
+      grid-template-columns: auto 200px;
+    }
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

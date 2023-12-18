@@ -1,0 +1,166 @@
+@import "styles/variables";
+
+.section{
+  padding-top: 24px;
+  padding-bottom: 80px;
+  &__wrap{
+    display: grid;
+    grid-template-areas:
+    "title info"
+    "calendar sidebar"
+    "servers sidebar"
+    "seo sidebar";
+    grid-template-columns: 1100px auto;
+    grid-template-rows: repeat(3,auto) 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    @media (max-width: $xxl) {
+      grid-template-columns: 1000px auto;
+      column-gap: 12px;
+      row-gap: 12px;
+    }
+    @media (max-width: $xl){
+      grid-template-areas:
+      "title"
+      "calendar"
+      "sidebar"
+      "servers"
+      "seo";
+      grid-template-columns: calc(var(--container-width) - 60px );
+    }
+    @media (max-width: $sm) {
+      grid-template-columns: 100%;
+      max-width:  calc(var(--container-width) + var(--container-side-padding) * 2);
+    }
+  }
+  &__title{
+    grid-area: title;
+    @media (max-width: $sm) {
+      text-align: center;
+    }
+  }
+  &__info{
+    grid-area: info;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $lg) {
+     display: none;
+    }
+  }
+  &__calendar{
+    grid-area: calendar;
+    @media (max-width: $xl){
+
+    }
+  }
+  &__sidebar{
+    grid-area: sidebar;
+    background: var(--dark-black-main);
+    border: 1px solid var(--dark-black-lines);
+    border-radius: 20px;
+    padding: 24px;
+    height: max-content;
+    @media (max-width: $overxl){
+      padding: 12px;
+    }
+    &_button{
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: var(--dark-white-dark);
+      width: 100%;
+    }
+  }
+  &__servers{
+    grid-area: servers;
+    &_fix_bottom{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 12px;
+      background: var(--dark-black-main);
+      border-top: 1px solid var(--dark-black-lines);
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 12px;
+      button{
+        border-radius: 6px;
+        font-size: 10px;
+        line-height: 120%;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    &_wrap{
+      display: grid;
+      grid-template-areas:
+              "left1 right1"
+              "left2 right2"
+              "left3 right3"
+              "notification notification"
+              "left4 right4";
+      gap: 24px;
+      @media (max-width: $xxl){
+        gap: 12px;
+      }
+      @media (max-width: $lg){
+        grid-template-areas:
+              "right1"
+              "right2"
+              "right3"
+              "notification"
+              "right4"
+              "left1"
+              "left2"
+              "left3"
+              "left4";
+      }
+    }
+    &_left{
+      &_1{
+        grid-area: left1;
+      }
+      &_2{
+        grid-area: left2;
+      }
+      &_3{
+        grid-area: left3;
+      }
+      &_4{
+        grid-area: left4;
+      }
+    }
+    &_right{
+      &_1{
+        grid-area: right1;
+      }
+      &_2{
+        grid-area: right2;
+      }
+      &_3{
+        grid-area: right3;
+      }
+      &_4{
+        grid-area: right4;
+      }
+    }
+    &_notification{
+      grid-area: notification;
+    }
+  }
+  &__seo{
+    grid-area: seo;
+  }
+  &__skeleton{
+    margin-bottom: 6px;
+  }
+}

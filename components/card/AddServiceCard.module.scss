@@ -1,0 +1,44 @@
+.card{
+  padding: 40px;
+  border: 1px solid var(--dark-black-lines);
+  border-radius: 20px;
+  margin-bottom: 24px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &__head {
+    &_title {
+      display: flex;
+      align-items: center;
+      color: var(--dark-white-light);
+      text-transform: uppercase;
+    }
+    &_icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      margin-right: 12px;
+      &_super_vip {
+        background: var(--addidtional-orange);
+      }
+      &_vip {
+        background: linear-gradient(#121722, #121722) padding-box,
+        linear-gradient(to right, darkblue, darkorchid) border-box;
+        border: 1px solid transparent;
+      }
+    }
+    &_available{
+      display: flex;
+      margin-top: 24px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    &_content{
+      margin-bottom: 24px;
+      color: var(--dark-white-main);
+    }
+  }
+}

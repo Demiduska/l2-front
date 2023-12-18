@@ -1,0 +1,131 @@
+@import "styles/variables";
+
+.form{
+  &_wrap{
+    padding: 40px 40px 25px 40px;
+    max-width: 450px;
+    width: 450px;
+    @media (max-width: $sm) {
+      max-width: 100%;
+      width: 380px;
+      padding: 24px;
+    }
+    &__icon{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    &__page{
+      background: var(--dark-black-main);
+      border: 1px solid var(--dark-black-lines);
+      border-radius: 20px;
+      padding: 40px;
+    }
+  }
+  &__title{
+    text-align: center;
+    color: var(--dark-white-light);
+    margin-bottom: 24px;
+    &_success{
+      margin-bottom: 12px;
+    }
+    &_email{
+      text-align: center;
+      margin-bottom: 12px;
+    }
+  }
+  &__text{
+    text-align: center;
+    margin-bottom: 24px;
+    &_success{
+      margin-bottom: 12px;
+    }
+  }
+  &__label{
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+    span{
+      margin-top: 12px;
+      display: inline-block;
+    }
+  }
+  &__show{
+    cursor: pointer;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    &:global(.active){
+      svg path {
+        fill: var(--dark-white-light);
+      }
+    }
+  }
+  &__buttons{
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_edit{
+      justify-content: flex-end;
+    }
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    button{
+      @media (max-width: $sm) {
+        width: 100%;
+        margin-top: 18px;
+      }
+
+    }
+  }
+  &__forgot{
+    color: var(--primary-blue-main);
+    transition: all .3s linear;
+    &:hover{
+      color: var(--primary-blue-dark);
+    }
+  }
+  &__submit{
+    padding: 14px 47px;
+  }
+  &__edit{
+    padding: 14px 24px;
+  }
+  &__footer{
+    padding: 25px 40px;
+    border-top: 1px solid var(--dark-black-lines);
+    display: flex;
+    justify-content: center;
+    @media (max-width: $sm) {
+      padding: 24px;
+      justify-content: space-between;
+    }
+    &_link{
+      margin-left: 12px;
+      color: var(--primary-blue-main);
+      transition: all .3s linear;
+      &:hover{
+        color: var(--primary-blue-dark);
+      }
+    }
+  }
+  &__button{
+    &_link{
+      display: block;
+      text-align: center;
+      margin-bottom: 12px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

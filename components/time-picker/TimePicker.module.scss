@@ -1,0 +1,30 @@
+@import "styles/variables";
+.picker{
+  margin-left: 24px;
+  @media (max-width: $sm) {
+    margin-left: 0;
+  }
+  &__head{
+    font-size: 14px;
+    line-height: 140%;
+    color:  var(--dark-white-dark);
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 6px;
+    @media (max-width: $xl) {
+      grid-template-columns: repeat(4,1fr);
+    }
+    @media (max-width: $md) {
+      grid-template-columns: repeat(3,1fr);
+    }
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "styles/variables";
+
+.menu{
+  &__wrap{
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+    top: 72px;
+    left: 0;
+    padding: 12px;
+    visibility: hidden;
+    @media (max-width: $sm) {
+      max-width: 100%;
+    }
+    &:global(.active){
+      visibility: visible;
+    }
+  }
+  &__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 400px;
+    width: 100%;
+    background: var(--primary-black-blur95);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    @media (max-width: $sm) {
+      max-width: 100%;
+    }
+  }
+  &__search{
+    margin-bottom: 13px;
+  }
+  &__nav{
+    margin-bottom: 20px;
+    ul{
+      display: block;
+      li{
+        padding-top: 17px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid var(--dark-black-lines);
+        margin-right: 0;
+      }
+    }
+  }
+  &__changer{
+    margin-top: 24px;
+  }
+}

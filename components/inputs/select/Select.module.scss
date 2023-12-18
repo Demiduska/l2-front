@@ -1,0 +1,21 @@
+@import "styles/variables";
+
+.select{
+  color: var(--dark-white-main);
+  &:after{
+    @media (max-width: $sm){
+      top: 14px;
+      right: 14px;
+    }
+  }
+  select{
+    padding: 14px 44px 14px 12px;
+    color: var(--dark-white-main);
+
+    @media (max-width: $sm) {
+      padding: 12px 42px 12px 12px;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+}

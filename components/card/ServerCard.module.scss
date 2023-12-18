@@ -1,0 +1,125 @@
+@import "styles/variables";
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--dark-black-main);
+  border-radius: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  position: relative;
+  font-size: 14px;
+  color: var(--dark-white-main);
+  @media (max-width: $overxl){
+    padding: 6px;
+  }
+  @media (max-width: $sm){
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 12px;
+  }
+  &:after{
+    width: 100%;
+    height: 1px;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    background: var(--dark-black-lines);
+  }
+  &:last-child{
+    margin-bottom: 0;
+    &:after{
+      display: none;
+    }
+  }
+  &__title{
+    color: var(--dark-white-main);
+    position: relative;
+    width: 148px;
+    display: flex;
+    @media (max-width: $sm){
+      width: calc(100% - 30px - 84px);
+    }
+  }
+  &__icon{
+    margin-right: 6px;
+  }
+  &__sticker{
+    position: relative;
+    top: -3px;
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $sm){
+      margin-left: 6px;
+    }
+  }
+  &__tags{
+    width: calc(50% - 143px - 36px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: $sm){
+      width: calc(24px * 3 + 12px);
+    }
+    &_item{
+      margin-right: 6px;
+      font-size: 14px;
+      position: relative;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  &__rate,&__chronic{
+    margin-left: 6px;
+  }
+  &__rate{
+    min-width: 65px;
+    @media (max-width: $sm){
+      font-size: 12px;
+      line-height: 130%;
+      margin-left: 0;
+      min-width: auto;
+    }
+  }
+
+  &__chronic{
+    @media (max-width: $sm){
+      font-size: 12px;
+      line-height: 130%;
+      margin-right: 6px;
+    }
+  }
+  &__custom{
+    margin-left: 4px;
+    @media (max-width: $sm){
+      font-size: 12px;
+      line-height: 130%;
+      margin-left: 0;
+    }
+  }
+  &__date{
+    margin-left: 6px;
+    @media (max-width: $sm){
+      font-size: 12px;
+      line-height: 130%;
+      flex: 1 1;
+      text-align: right;
+    }
+  }
+  &:global(.super_vip){
+    color: var(--primary-white);
+    background: var(--primary-gradient);
+    .card{
+      &__title{
+        color: var(--primary-white);
+      }
+    }
+  }
+
+}

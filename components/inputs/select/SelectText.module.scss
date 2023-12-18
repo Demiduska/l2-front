@@ -1,0 +1,19 @@
+@import "styles/variables";
+
+.select{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: var(--dark-white-main);
+  @media (max-width: $sm) {
+    flex-wrap: wrap;
+  }
+  select{
+    width: 310px;
+    @media (max-width: $sm) {
+      width: 100%;
+      margin-top: 12px;
+    }
+  }
+}

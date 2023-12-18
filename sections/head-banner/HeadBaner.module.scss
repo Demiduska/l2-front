@@ -1,0 +1,15 @@
+@import "styles/variables";
+
+.section{
+  background: var(--primary-black-gradient);
+  @media (max-width: $sm) {
+    padding-top: 72px;
+  }
+  &__image{
+    height: 400px;
+    width: 100%;
+    @media (max-width: $sm) {
+      height: auto;
+    }
+  }
+}

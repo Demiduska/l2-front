@@ -1,0 +1,44 @@
+@import "styles/variables";
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  &__button{
+    background: var(--dark-black-main);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--dark-white-main);
+    margin-right: 6px;
+    border: 1px solid transparent;
+    min-width: 40px;
+    font-size: 16px;
+    line-height: 125%;
+    @media (max-width: $sm) {
+      font-size: 14px;
+      padding: 5px 6px;
+      min-width: 30px;
+      line-height: 140%;
+    }
+    &_prev,&_first{
+      transform: rotate(-180deg);
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    &_active{
+      border: 1px solid var(--dark-black-lines);
+    }
+    &_disabled{
+      svg,path{
+        fill: var(--dark-white-dark);
+      }
+    }
+    &:hover{
+      background: var(--dark-black-light);
+    }
+  }
+}

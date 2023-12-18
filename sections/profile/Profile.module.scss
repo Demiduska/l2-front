@@ -1,0 +1,8 @@
+@import "styles/variables";
+
+.profile{
+  padding-top: 104px;
+  @media (max-width: $sm) {
+    padding-top: 66px;
+  }
+}

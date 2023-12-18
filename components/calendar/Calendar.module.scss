@@ -1,0 +1,51 @@
+@import "styles/variables";
+
+.calendar{
+  border: 1px solid var(--dark-black-lines);
+  border-radius: 20px;
+  padding: 24px;
+  @media (max-width: $overxl){
+    padding: 12px;
+  }
+  @media (max-width: $sm){
+    padding: 0;
+    border: none;
+  }
+  div[data-testid="DAY_ITEM"]{
+    @media (max-width: $sm){
+      min-width: 40px;
+    }
+  }
+  button{
+    &:after{
+      background: transparent;
+    }
+    svg{
+      fill: var(--dark-white-light);
+    }
+  }
+  &__month{
+    &_title{
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 140%;
+      //color: var(--dark-white-dark);
+    }
+  }
+  &__day{
+    &_label{
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 120%;
+      text-transform: uppercase;
+      //color: var(--dark-white-dark);
+
+    }
+    &_value{
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 125%;
+      //color: var(--dark-white-main);
+    }
+  }
+}

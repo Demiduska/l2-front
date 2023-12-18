@@ -1,0 +1,65 @@
+@import "styles/variables";
+
+.card{
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--dark-black-lines);
+  align-items: center;
+  @media (max-width: $sm){
+    padding: 12px 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  &:last-child{
+    border-bottom: none;
+  }
+  &_info{
+    display: flex;
+    align-items: center;
+    @media (max-width: $sm){
+      flex-wrap: wrap;
+    }
+  }
+  &_title{
+    margin-left: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--dark-white-main);
+    margin-right: 12px;
+    @media (max-width: $sm){
+      margin-right: 0;
+    }
+  }
+  &_date{
+    font-size: 14px;
+    color: var(--dark-white-dark);
+    margin-right: 12px;
+    @media (max-width: $sm){
+      font-size: 12px;
+    }
+  }
+  &_status{
+    @media (max-width: $sm){
+      width: 100%;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  }
+  &__image{
+    background: transparent;
+
+    @media (max-width: $sm){
+
+    }
+    &_wrap{
+      margin-right: 12px;
+      @media (max-width: $sm){
+        margin-top: 12px;
+        width: 100%;
+      }
+    }
+  }
+}

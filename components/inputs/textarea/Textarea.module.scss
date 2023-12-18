@@ -1,0 +1,33 @@
+@import "styles/variables";
+
+.textarea{
+  font-weight: 700;
+  color: var(--dark-white-main);
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  @media (max-width: $sm) {
+    margin-bottom: 12px;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+  textarea{
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+    padding: 14px 12px;
+    background: var(--darl-black-dark);
+    border: 1px solid var(--dark-black-lines);
+    border-radius: 10px;
+    outline: none;
+    min-height: 96px;
+    font-family: $ProximaNova;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+  }
+}

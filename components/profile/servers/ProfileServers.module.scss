@@ -1,0 +1,83 @@
+@import "styles/variables";
+
+.servers{
+  padding-top: 40px;
+  padding-bottom: 80px;
+  @media (max-width: $md) {
+    padding-top: 24px;
+  }
+  &__title{
+    display: flex;
+    align-items: center;
+    h2{
+      color: var(--dark-white-light);
+      margin-right: 24px;
+      display: flex;
+      align-items: center;
+      svg{
+        margin-left: 6px;
+      }
+    }
+    &_link{
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: 12px;
+      }
+      &:hover{
+        svg,path{
+          fill: var(--dark-white-main);
+        }
+      }
+    }
+  }
+  &__list{
+  }
+  &__wrap{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: auto 288px;
+    column-gap: 24px;
+    @media (max-width: $md) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: $sm) {
+      margin-top: 24px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.edit{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 24px;
+  @media (max-width: $md) {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+.discounts{
+  border: 1px solid var(--dark-black-lines);
+  border-radius: 20px;
+}
+.services{
+  &__servers{
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: var(--dark-white-main);
+    @media (max-width: $sm){
+      flex-wrap: wrap;
+    }
+    label{
+      margin-left: 12px;
+      width: 301px;
+      @media (max-width: $sm){
+        width: 100%;
+        margin-left: 0;
+        margin-top: 12px;
+      }
+    }
+  }
+}

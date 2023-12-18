@@ -1,0 +1,51 @@
+@import "styles/variables";
+
+.checkbox{
+  position: relative;
+  display: flex;
+  label{
+    display: flex;
+    align-items: center;
+    color: var(--dark-white-main);
+    cursor: pointer;
+    @media (max-width: $sm) {
+      font-size: 12px;
+    }
+    &:before{
+      position: relative;
+      width: 21px;
+      height: 21px;
+      background: var(--dark-black-main);
+      border: 2px solid var(--dark-black-lines);
+      border-radius: 5px;
+      display: block;
+      content: '';
+      margin-right: 12px;
+    }
+    span{
+      position: absolute;
+      left: 7px;
+      top: 4px;
+      opacity: 0;
+      @media (max-width: $sm) {
+        top: 6px;
+      }
+    }
+  }
+  input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    &:checked{
+      &+label{
+        &:before{
+          background: var(--primary-blue-main);
+        }
+        span{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

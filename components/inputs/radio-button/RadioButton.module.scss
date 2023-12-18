@@ -1,0 +1,25 @@
+.radio{
+
+  label{
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--dark-white-dark);
+    background: var(--dark-black-light);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  input{
+    display: none;
+    &:checked{
+      +label{
+        background: var(--primary-blue-main);
+        color: var(--primary-white)
+      }
+    }
+  }
+}

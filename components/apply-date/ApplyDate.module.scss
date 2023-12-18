@@ -1,0 +1,12 @@
+@import "styles/variables";
+
+.item{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--addidtional-green);
+  @media (max-width: $sm) {
+    font-size: 12px;
+    line-height: 130%;
+  }
+}

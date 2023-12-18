@@ -1,0 +1,76 @@
+@import "styles/variables";
+
+.btn{
+  font-family: $ProximaNova;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  background: var(--primary-blue-main);
+  border-radius: 10px;
+  color: var(--primary-white);
+  padding: 10px 20px;
+  //transition: all .3s linear;
+  @media (max-width: $sm) {
+    font-size: 14px;
+  }
+  &:hover{
+    background: var(--primary-blue-dark);
+  }
+  &--disabled{
+    cursor: default;
+    background: var(--dark-black-dark);
+    color: var(--dark-white-dark);
+  }
+  &--br-60{
+    border-radius: 60px ;
+  }
+  &--black-light{
+    background: var(--dark-black-light);
+    border: 1px solid var(--dark-black-lines);
+    &:hover{
+      background: var(--dark-black-lines);
+      border: 1px solid var(--dark-black-lines);
+    }
+  }
+  &--white-light{
+    background: var(--dark-white-light);
+    font-weight: 400;
+    color:var(--dark-black-main);
+    border: 1px solid transparent;
+    &:hover{
+      background: var(--dark-black-main);
+      color: var(--dark-white-light);
+      border: 1px solid var(--dark-white-light);
+    }
+  }
+  &--transparent{
+    font-weight: 400;
+    border: 1px solid var(--primary-blue-main);
+    color: var(--primary-white);
+    background: transparent;
+  }
+  &--icon{
+    display: flex;
+    align-items: center;
+    svg{
+      margin-right: 10px;
+    }
+  }
+  &--reset{
+    font-family: $ProximaNova;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    background: transparent;
+    border-radius: 10px;
+    color: var(--primary-blue-main);
+    padding: 10px 20px;
+  }
+  &--gradient{
+    font-weight: 400;
+    background: linear-gradient(90deg, #C624FF 0%, #780EFF 32.29%, #4F32FF 67.19%, #2962FF 100%), #121722;
+    border-radius: 60px;
+  }
+}

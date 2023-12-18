@@ -1,0 +1,33 @@
+@import "styles/variables";
+
+.form{
+  &__label{
+    position: relative;
+  }
+  &__input{
+    font-family: $ProximaNova;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    padding: 10px 50px;
+    width: 100%;
+    display: block;
+    transition: all .3s linear;
+    border: 1px solid var(--dark-black-lines);
+    background: transparent;
+    border-radius: 60px;
+    background: var(--dark-black-main);
+    &:focus{
+      background: var(--dark-black-dark);
+    }
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+    &_icon{
+      position: absolute;
+      left: 18px;
+      top: 10px;
+    }
+  }
+}
